@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/Series_PieChart/Form1.cs) (VB: [Form1.vb](./VB/Series_PieChart/Form1.vb))
+<!-- default file list end -->
 # How to create a Pie chart
 
 

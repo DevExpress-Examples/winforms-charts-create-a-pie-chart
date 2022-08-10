@@ -1,17 +1,22 @@
-﻿Imports System
-Imports System.Collections.Generic
+Imports DevExpress.XtraEditors
+Imports System
 Imports System.Windows.Forms
 
 Namespace Series_PieChart
-	Friend Module Program
-		''' <summary>
-		''' The main entry point for the application.
-		''' </summary>
-		<STAThread>
-		Sub Main()
-			Application.EnableVisualStyles()
-			Application.SetCompatibleTextRenderingDefault(False)
-			Application.Run(New Form1())
-		End Sub
-	End Module
+
+    Friend Module Program
+
+        ''' <summary>
+        ''' The main entry point for the application.
+        ''' </summary>
+        <STAThread>
+        Sub Main()
+            Call WindowsFormsSettings.SetDPIAware()
+            WindowsFormsSettings.AllowDpiScale = True
+            WindowsFormsSettings.AllowAutoScale = DevExpress.Utils.DefaultBoolean.True
+            Call Application.EnableVisualStyles()
+            Application.SetCompatibleTextRenderingDefault(False)
+            Call Application.Run(New Form1())
+        End Sub
+    End Module
 End Namespace

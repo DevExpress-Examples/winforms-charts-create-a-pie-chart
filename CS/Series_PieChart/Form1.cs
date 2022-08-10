@@ -21,9 +21,13 @@ namespace Series_PieChart {
             series1.DataSource = DataPoint.GetDataPoints();
             series1.ArgumentDataMember = "Argument";
             series1.ValueDataMembers.AddRange(new string[] { "Value" });
-            
+
             // Add the series to the chart.
             pieChart.Series.Add(series1);
+
+            // Access diagram settings.
+            SimpleDiagram diagram = (SimpleDiagram)pieChart.Diagram;
+            diagram.Margins.All = 10;
 
             // Format the the series labels.
             series1.Label.TextPattern = "{VP:p0} ({V:.##}M km²)";
@@ -39,6 +43,9 @@ namespace Series_PieChart {
 
             // Access the view-type-specific options of the series.
             PieSeriesView myView = (PieSeriesView)series1.View;
+
+            // Specify the pie rotation.
+            myView.Rotation = -60;
 
             // Specify a data filter to explode points.
             myView.ExplodedPointsFilters.Add(new SeriesPointFilter(SeriesPointKey.Value_1,

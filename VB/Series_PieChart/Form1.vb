@@ -24,14 +24,18 @@ Namespace Series_PieChart
 			series1.ArgumentDataMember = "Argument"
 			series1.ValueDataMembers.AddRange(New String() { "Value" })
 
-			' Add the series to the chart.
-			pieChart.Series.Add(series1)
+            ' Add the series to the chart.
+            pieChart.Series.Add(series1)
 
-			' Format the the series labels.
-			series1.Label.TextPattern = "{VP:p0} ({V:.##}M km�)"
+            ' Access diagram settings.
+            Dim diagram As SimpleDiagram = CType(pieChart.Diagram, SimpleDiagram)
+            diagram.Margins.All = 10
 
-			' Format the series legend items.
-			series1.LegendTextPattern = "{A}"
+            ' Format the the series labels.
+            series1.Label.TextPattern = "{VP:p0} ({V:.##}M km²)"
+
+            ' Format the series legend items.
+            series1.LegendTextPattern = "{A}"
 
 			' Adjust the position of series labels. 
 			CType(series1.Label, PieSeriesLabel).Position = PieSeriesLabelPosition.TwoColumns
@@ -47,10 +51,13 @@ Namespace Series_PieChart
 			myView.ExplodedPointsFilters.Add(New SeriesPointFilter(SeriesPointKey.Argument, DataFilterCondition.NotEqual, "Others"))
 			myView.ExplodeMode = PieExplodeMode.UseFilters
 			myView.ExplodedDistancePercentage = 30
-			myView.RuntimeExploding = True
+            myView.RuntimeExploding = True
 
-			' Customize the legend.
-			pieChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True
+            ' Specify the pie rotation.
+            myView.Rotation = -60
+
+            ' Customize the legend.
+            pieChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True
 
 			' Add the chart to the form.
 			pieChart.Dock = DockStyle.Fill

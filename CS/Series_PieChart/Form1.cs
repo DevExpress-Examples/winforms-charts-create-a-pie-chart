@@ -30,7 +30,7 @@ namespace Series_PieChart {
             diagram.Margins.All = 10;
 
             // Format the the series labels.
-            series1.Label.TextPattern = "{VP:p0} ({V:.##}M km²)";
+            series1.Label.TextPattern = "{VP:p0} ({V:.##}M kmÂ²)";
 
             // Format the series legend items.
             series1.LegendTextPattern = "{A}";

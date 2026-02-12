@@ -29,7 +29,7 @@ To access pie series view settings, cast the [SeriesBase.View](https://docs.deve
 * [How to: show a Pie series' total label](https://github.com/DevExpress-Examples/how-to-show-a-pie-series-total-label-t556267)
 * [How to: display values both as real values and as percentages in a Pie chart's legend](https://github.com/DevExpress-Examples/how-to-display-values-both-as-real-values-and-as-percentages-in-a-pie-charts-legend-e1411)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-charts-create-a-pie-chart&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-charts-create-a-pie-chart&~~~was_helpful=no)
 
